@@ -1,0 +1,11 @@
+services:
+  python-env:
+    build: .
+    container_name: python-env
+    ports:
+      - 80:80
+    volumes:
+      - .:/code
+    stdin_open: true
+    tty: true
+version: '3'
