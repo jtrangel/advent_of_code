@@ -15,6 +15,9 @@ def read():
 
     return input
 
+#----------------------------------------------------------------------
+# Part 1 Code
+
 def surface_area(l,w,h):
     
     return 2*(l*w +w*h + h*l)
@@ -42,6 +45,9 @@ def aggregate(input):
     output = total_wrapper
 
     return output
+
+#----------------------------------------------------------------------
+# Part 2 Code
 
 def ribbon_length(input):
 
