@@ -7,10 +7,12 @@ Testing my algorithmic skills using self taught Data Structures and Algorithms f
 
 Make sure you have docker daemon via docker desktop available.
 
-This command composes the environment whilst rebuilding the image to account for any changes.
+The first command builds the image, names it "python-env" using the Dockerfile in the current directory(.). The next command then composes the environment, builds the container,  and then runs it.
 
 ```
-docker compose up --build
+docker build -t python-env .
+
+docker compose up 
 ```
 
 Afterwards, open the container using VScode Dev Containers. By default, the app directory will be `/root`. Change it by accessing the container configuration file. Refer to this (forum)[https://stackoverflow.com/questions/63962060/visual-studio-code-remote-containers-change-default-root-directory]
