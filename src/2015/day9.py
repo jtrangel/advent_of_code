@@ -1,5 +1,4 @@
 from itertools import permutations
-import numpy as np
 
 # Read input txt file
 def read(path):
