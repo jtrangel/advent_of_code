@@ -20,3 +20,11 @@ Afterwards, open the container using VScode Dev Containers. By default, the app 
 This will set the default folder to `/src`, which references `/src` in our local setup (this is specified in the Dockerfile).
 
 Development is now streamlined using Dev Containers, which is a clean, base environment to work with.
+
+# Using python terminal
+
+Similarly, you can opt to just use the terminal directly to run the code as such
+
+```
+python day13.py
+```
