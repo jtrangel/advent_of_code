@@ -1,3 +1,5 @@
+from typing import Tuple
+
 def read(path:str) -> str:
     return open(path, "r").read()
 
@@ -14,7 +16,7 @@ aunt_data = {
     'perfumes': 1
 }
 
-def match_aunt(input:str):
+def match_aunt(input:str) -> Tuple[int, int]:
 
     # For each line, grab the key value pair known
     for line in input.splitlines():
