@@ -1,8 +1,6 @@
-"f\x19azclj\"rsvaokgvty\"aeq"
-"fdan\\\x93"
-"fdan\\\x97"
-"fdan\\\x9e"
-"fdan\\\x9d"
-"fdan\\\x9c"
-"fdan\\\x9f"
-"erse\x9etmzhlmhy\x67yftoti"
+##.#.#
+...##.
+#....#
+..#...
+#.#..#
+####.#

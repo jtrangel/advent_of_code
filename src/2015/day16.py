@@ -1,6 +1,6 @@
 from typing import Tuple
 
-def read(path:str) -> str:
+def read(path: str) -> str:
     return open(path, "r").read()
 
 aunt_data = {
@@ -16,10 +16,10 @@ aunt_data = {
     'perfumes': 1
 }
 
-def match_aunt(input:str) -> Tuple[int, int]:
+def match_aunt(inpt: str) -> Tuple[int, int]:
 
     # For each line, grab the key value pair known
-    for line in input.splitlines():
+    for line in inpt.splitlines():
         n = line.split(' ')
 
         key1 = n[2].rstrip(':')
@@ -36,8 +36,8 @@ def match_aunt(input:str) -> Tuple[int, int]:
             val2 == aunt_data[key2] and
             val3 == aunt_data[key3]
             ):
-            aunt_num1 = n[1].rstrip(':')
-        
+            aunt_num1 = int(n[1].rstrip(':'))
+
         # Part 2: Set value as lower limit or upper limit for certain keys
         lower_lim = ['cats', 'trees']
         upper_lim = ['pomeranians', 'goldfish']
@@ -50,9 +50,9 @@ def match_aunt(input:str) -> Tuple[int, int]:
                 operator = "<"
             else:
                 operator = "=="
-            
+
             ops.append(operator)
-        
+
         # Evaluate each condition using the dynamic key assignment
         if (eval(f"val1 {ops[0]} aunt_data[key1]")
             and
@@ -60,16 +60,16 @@ def match_aunt(input:str) -> Tuple[int, int]:
             and
             eval(f"val3 {ops[2]} aunt_data[key3]")
             ):
-            aunt_num2 = n[1].rstrip(':')
-        
+            aunt_num2 = int(n[1].rstrip(':'))
+
     return aunt_num1, aunt_num2
 
 if __name__ == "__main__":
 
-    input = read("./inputs/day16.txt")
+    inpt = read("./inputs/day16.txt")
 
     # Part 1
-    out1, out2 = match_aunt(input)
+    out1, out2 = match_aunt(inpt)
     print(out1)
 
     # Part 2

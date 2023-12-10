@@ -1,7 +1,7 @@
 from typing import List, Tuple
 from itertools import combinations
 
-def read(path:str) -> str:
+def read(path: str) -> List:
     o = open(path, "r").read()
 
     arr = []
@@ -17,7 +17,7 @@ def get_combinations(i: List) -> Tuple[int, int]:
     valid_combi = 0
     valid_arr = []
     for n in range(len(i)):
-        for tup in list(combinations(i,n)):
+        for tup in list(combinations(i, n)):
             
             # Part 1
             if sum(tup) == 150:
@@ -29,15 +29,15 @@ def get_combinations(i: List) -> Tuple[int, int]:
     min_valid_combi = 0
     for t in valid_arr:
         if len(t) == min_containers_needed:
-            min_valid_combi +=1
+            min_valid_combi += 1
 
     return valid_combi, min_valid_combi
 
 if __name__ == "__main__":
-    input = read("./inputs/day17.txt")
+    inpt = read("./inputs/day17.txt")
     
     # Part 1
-    out, out2 = get_combinations(input)
+    out, out2 = get_combinations(inpt)
     print(out)
 
     # Part 2
